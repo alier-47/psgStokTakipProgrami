@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 11.125" name="pisagorDB">
+  <DataContextMoniker Name="/pisagorDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2865f1dd-6322-4110-a825-9bef1e30fa07" absoluteBounds="6.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/pisagorDBDataContext/Yedek" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b30f2d42-72d4-46f1-8050-9b7b64e1e944" absoluteBounds="6.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b6efcea4-6b7a-4512-bb96-d07ae933be61" absoluteBounds="6.75, 2.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/pisagorDBDataContext/CalisanCizelgesi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab961462-b979-4664-8fd3-4d127d286c98" absoluteBounds="6.765, 3.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a4a3783e-ed6b-4e44-88f4-a47709951f1c" absoluteBounds="6.75, 5.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/pisagorDBDataContext/CalisanEDevlet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="21a1be92-2ea0-4aea-95ab-08e0e3f1e5bc" absoluteBounds="6.765, 6.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f6f9228c-ec41-4d0a-af54-a299071c6348" absoluteBounds="0.75, 5, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/pisagorDBDataContext/Calisanlar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="daa3d037-7c60-4b7c-8436-7f058f6b4ad7" absoluteBounds="0.765, 5.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4be40192-8415-4f78-9318-96709ddb5dde" absoluteBounds="3.5, 5, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/pisagorDBDataContext/CalisanlarDetay" />
+      <nestedChildShapes>
+        <elementListCompartment Id="63eb534f-6bfb-4388-a300-9fed6a38a90e" absoluteBounds="3.515, 5.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b62001ab-0cd8-4bf0-a8b1-cef387ab63a9" absoluteBounds="0.75, 1.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/pisagorDBDataContext/Firmalar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8a0d67b2-63f5-43ed-bb91-ce78db4f63a6" absoluteBounds="0.765, 1.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="06d00b5f-ff5a-4afd-a9db-e56ab10271b3" absoluteBounds="3.5, 1, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/pisagorDBDataContext/FirmalarDetay" />
+      <nestedChildShapes>
+        <elementListCompartment Id="03406415-8236-4426-b816-2588ed153619" absoluteBounds="3.515, 1.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="352f11f8-2b29-437b-a261-8901d57672ea" absoluteBounds="0.75, 8.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/pisagorDBDataContext/GelenOdemeler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="20d36c47-489f-42c1-b7f4-29e70a247aba" absoluteBounds="0.765, 9.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="15cdf011-0541-4cb7-9e00-e4363d466447" absoluteBounds="3.75, 8.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/pisagorDBDataContext/Harcamalar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7d138fbf-e6ca-4275-ba68-c95f14be53ef" absoluteBounds="3.765, 9.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c6e43a0f-d57b-4436-bd6d-234f4b5b18f2" absoluteBounds="6.75, 8.75, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/pisagorDBDataContext/İdri" />
+      <nestedChildShapes>
+        <elementListCompartment Id="06331fa5-da71-4cec-8c79-d0e7290d882e" absoluteBounds="6.765, 9.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="329e7231-03ae-4921-a1e9-3dd403ff842a" absoluteBounds="9.75, 0.75, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/pisagorDBDataContext/Kullanıcılar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8e0728bc-3d14-4fba-b554-5e965499520b" absoluteBounds="9.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2b4a817c-35e8-4bee-9950-67241fd32e18" absoluteBounds="9.75, 3.75, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/pisagorDBDataContext/Musteriler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="165adad7-695a-4be5-96fa-b6172adeede6" absoluteBounds="9.765, 4.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f60bf4e4-5a73-4753-9ba1-fc17791aa1c7" absoluteBounds="9.75, 7.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/pisagorDBDataContext/MusterilerDetay" />
+      <nestedChildShapes>
+        <elementListCompartment Id="92b4384c-6555-435a-8591-f41d3b96dbd8" absoluteBounds="9.765, 8.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 6.27005126953125); (3.5 : 6.27005126953125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/pisagorDBDataContext/Calisanlar/Calisanlar_CalisanlarDetay" />
+      <nodes>
+        <classShapeMoniker Id="f6f9228c-ec41-4d0a-af54-a299071c6348" />
+        <classShapeMoniker Id="4be40192-8415-4f78-9318-96709ddb5dde" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.32774983723958); (3.5 : 2.32774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/pisagorDBDataContext/Firmalar/Firmalar_FirmalarDetay" />
+      <nodes>
+        <classShapeMoniker Id="b62001ab-0cd8-4bf0-a8b1-cef387ab63a9" />
+        <classShapeMoniker Id="06d00b5f-ff5a-4afd-a9db-e56ab10271b3" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

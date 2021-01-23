@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="pisagorMuhendislikST" Class="pisagorDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=pisagorMuhendislikST;Integrated Security=True" SettingsObjectName="PsgMuhendislik.Properties.Settings" SettingsPropertyName="pisagorMuhendislikSTConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Yedek" Member="Yedeks">
+    <Type Name="Yedek">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Dosya" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CalisanCizelgesi" Member="CalisanCizelgesis">
+    <Type Name="CalisanCizelgesi">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CalisanID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tarih" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GunSayisi" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Aciklama" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CalisanEDevlet" Member="CalisanEDevlets">
+    <Type Name="CalisanEDevlet">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CalisanID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TcNo" Type="System.String" DbType="NVarChar(11)" CanBeNull="true" />
+      <Column Name="Sifre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Calisanlar" Member="Calisanlars">
+    <Type Name="Calisanlar">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AdSoyad" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Telefon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsBaslangicTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AlacakTutar" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="CalismaSekli" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SilinmeTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MaasGirisiDurum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Silme" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Calisanlar_CalisanlarDetay" Member="CalisanlarDetays" ThisKey="ID" OtherKey="CalisanID" Type="CalisanlarDetay" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CalisanlarDetay" Member="CalisanlarDetays">
+    <Type Name="CalisanlarDetay">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CalisanID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OdemeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tarih" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AlacakTutar" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="OdenenTutar" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Aciklama" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SilinmeTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Silme" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Calisanlar_CalisanlarDetay" Member="Calisanlar" ThisKey="CalisanID" OtherKey="ID" Type="Calisanlar" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Firmalar" Member="Firmalars">
+    <Type Name="Firmalar">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirmaAdi" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Telefon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Borc" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Tarih" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SilinmeTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Silme" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Firmalar_FirmalarDetay" Member="FirmalarDetays" ThisKey="ID" OtherKey="FirmaID" Type="FirmalarDetay" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FirmalarDetay" Member="FirmalarDetays">
+    <Type Name="FirmalarDetay">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirmaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OdemeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tarih" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Aciklama" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AlinanMalTutari" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="OdenenTutar" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="OdemeSekli" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SilinmeTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Silme" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Firmalar_FirmalarDetay" Member="Firmalar" ThisKey="FirmaID" OtherKey="ID" Type="Firmalar" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GelenOdemeler" Member="GelenOdemelers">
+    <Type Name="GelenOdemeler">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="gelenOdemeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tarih" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Aciklama" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Tutar" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SilinmeTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Silme" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Harcamalar" Member="Harcamalars">
+    <Type Name="Harcamalar">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="harcamaid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tarih" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Aciklama" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Tutar" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SilinmeTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Silme" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.İdris" Member="İdris">
+    <Type Name="İdri">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Aciklama" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Tarih" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Tutar" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SilinmeTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Silme" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Kullanıcılar" Member="Kullanıcılars">
+    <Type Name="Kullanıcılar">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KullaniciAdi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Sifre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Musteriler" Member="Musterilers">
+    <Type Name="Musteriler">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AdSoyad" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Telefon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BinaAdi" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Borc" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Tarih" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OdemeTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OdemeSekli" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Not]" Member="Not" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SilinmeTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Silme" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MusterilerDetay" Member="MusterilerDetays">
+    <Type Name="MusterilerDetay">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MusteriID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OdemeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EklenenTutar" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="OdenenTutar" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="OdemeSekli" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Tarih" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Aciklama" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SilinmeTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Silme" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
